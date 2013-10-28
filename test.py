@@ -1,7 +1,6 @@
 import unittest
 from shift import arg
 from random import randint
-from copy import copy
 
 def noop(*args, **kwargs):
     return (list(args), kwargs)
@@ -36,10 +35,9 @@ class TestArg(unittest.TestCase):
                 fn = fn << arg(*_args, **_kwargs)
 
             _args, _kwargs = randargs()
-            fn_args, fn_kwargs = copy(_args), copy(_kwargs)
-            _args.extend(args)
-            _kwargs.update(kwargs)
-            self.assertEqual((_args, _kwargs), fn(*fn_args, **fn_kwargs))
+            args.extend(_args)
+            kwargs = dict(kwargs, **_kwargs)
+            self.assertEqual((args, kwargs), fn(*_args, **_kwargs))
 
 if __name__ == '__main__':
     unittest.main()

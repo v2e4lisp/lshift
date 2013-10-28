@@ -12,8 +12,8 @@ class _Partial(object):
         return self.partial(*part.args, **part.kwargs)
 
     def __call__(self, *args, **kwargs):
-        args = list(args) + self.args
-        kwargs.update(self.kwargs)
+        args = self.args + list(args)
+        kwargs = dict(self.kwargs, **kwargs)
         return self.fn(*args, **kwargs)
 
     def partial(self, *args, **kwargs):
