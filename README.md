@@ -1,7 +1,7 @@
 # lshift
 left shift arguments to make a function a partial application.
 
-[![Build Status](https://travis-ci.org/v2e4lisp/shift.png)](https://travis-ci.org/v2e4lisp/shift)
+[![Build Status](https://travis-ci.org/v2e4lisp/lshift.png)](https://travis-ci.org/v2e4lisp/lshift)
 tested on 2.7, 3.2, 3.3
 
 ## install
