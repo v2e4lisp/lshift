@@ -1,0 +1,6 @@
+*pyc
+tmp*
+tmp/
+dist
+*egg-info
+*rst
