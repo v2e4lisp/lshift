@@ -1,5 +1,5 @@
 import unittest
-from shift import arg
+from lshift import arg
 from random import randint
 
 def noop(*args, **kwargs):
